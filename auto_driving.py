@@ -195,8 +195,8 @@ def valid_input(stage, input_str):              # check whether a user input is 
         try:
             x = int(input_list[0])
             y = int(input_list[1])
-            if x<=0 or y<=0:
-                print("Both x and y must be positive integers.")
+            if x<0 or y<0:
+                print("Both x and y must be 0 or positive integers.")
                 return x, y, "", False
             direction = input_list[2].strip()
             return x, y, direction, True
